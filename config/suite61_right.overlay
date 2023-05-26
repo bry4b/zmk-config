@@ -1,0 +1,11 @@
+// suite61_right.overlay
+
+#include "suite61.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
+
+&right_encoder {
+    status = "okay";
+};

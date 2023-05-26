@@ -1,0 +1,33 @@
+// suite61.keymap
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default {
+
+    //              |    ESC    |     1     |     2     |     3     |     4     |     5     |                       |     6     |     7     |     8     |     9     |     0     |   DELETE  |
+    //              |    TAB    |     Q     |     W     |     E     |     R     |     T     |                       |     Y     |     U     |     I     |     O     |     P     | BACKSPACE |
+    //              |  CONTROL  |     A     |     S     |     D     |     F     |     G     |                       |     H     |     J     |     K     |     L     |     ;     |   ENTER   |           
+    //  |   NONE    |   SHIFT   |     Z     |     X     |     C     |     V     |     B     |   ENC0    |    ENC1   |     N     |     M     |     ,     |     .     |     /     |    UP     |    FN     |
+    //  |   NONE    |   TRANS   |    GUI    |    ALT    |   LOWER   |    NONE   |           |   SPACE   |   SPACE   |           |   RAISE   |   SUPER   |  CONTROL  |    LEFT   |    DOWN   |   RIGHT   |
+
+            bindings = <
+                        &kp ESC     &kp 1       &kp 2       &kp 3       &kp 4       &kp 5                               &kp 6       &kp 7       &kp 8       &kp 9       &kp 0       &kp DEL
+                        &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
+                        &kp LCTRL   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp ENTER
+            &none       &kp LSHIFT  &kp Z       &kp X       &kp C       &kp V       &kp B     &kp C_MUTE   &kp none     &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp UP      &mo FUNC
+            &none       &none       &kp LGUI    &kp LALT    &mo LOWER   &none                 &kp space    &kp space                &mo RAISE   &mo SUPER   &kp RCTRL   &kp LEFT    &kp DOWN    &kp RIGHT
+            >;
+
+            sensor-bindings = <
+            &inc_dec_kp C_VOL_UP C_VOL_DOWN
+            &inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN
+            >;
+            
+        };
+    };
+};

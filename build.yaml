@@ -15,7 +15,5 @@
 include:
   - board: bt60_v1
 include:
-  - board: bt60_v1
-include:
   - board: nice_nano_v2
     shield: suite61
