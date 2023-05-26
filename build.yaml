@@ -18,6 +18,6 @@ include:
   - board: bt60_v1
 include:
   - board: nice_nano_v2
-    shield: lily58_left
+    shield: suite61_left
   - board: nice_nano_v2
-    shield: lily58_right
+    shield: suite61_right
