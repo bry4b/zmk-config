@@ -20,7 +20,7 @@
             &none       &none       &kp LGUI    &kp LALT    &none       &none                 &kp SPACE    &kp SPACE                &none       &none       &kp RCTRL   &kp LEFT    &kp DOWN    &kp RIGHT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN                             &inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;    
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP                                 &inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
     };
 };
