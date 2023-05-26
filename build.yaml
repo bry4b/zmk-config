@@ -11,9 +11,10 @@
 #   - board: nice_nano_v2
 #     shield: reviung41
 #
----
+
 include:
   - board: bt60_v1
-include:
   - board: nice_nano_v2
-    shield: suite61
+    shield: suite61_left
+  - board: nice_nano_v2
+    shield: suite61_right
