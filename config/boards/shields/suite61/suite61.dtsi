@@ -75,6 +75,14 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
     };
+
+    nice_view_spi: &spi0 {
+        compatible = "nordic,nrf-spim";
+        sck-pin = <&pro_micro 20>
+        mosi-pin = <&pro_micro 17>
+        miso-pin = <&gpio0 25>
+        cs-gpios = <&gpio0 08 GPIO_ACTIVE_HIGH>
+    }
     
 };
 
