@@ -1,7 +1,0 @@
-// suite61_left.overlay
-
-#include "suite61.dtsi"
-
-&left_encoder {
-    status = "okay";
-};
