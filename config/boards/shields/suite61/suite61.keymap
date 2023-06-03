@@ -18,7 +18,7 @@
                         &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSPC
                         &kp LCTRL   &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp ENTER
             &none       &kp LSHIFT  &kp Z       &kp X       &kp C       &kp V       &kp B     &kp C_MUTE   &kp PGDN     &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp UP      &none    
-            &ext_power EP_TOG        &none       &kp LGUI    &kp LALT    &none       &none                 &kp SPACE    &kp SPACE                &none       &none       &kp RCTRL   &kp LEFT    &kp DOWN    &kp RIGHT
+            &none       &none       &kp LGUI    &kp LALT    &none       &none                 &kp SPACE    &kp SPACE                &none       &none       &kp RCTRL   &kp LEFT    &kp DOWN    &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP                                                            &inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
@@ -27,8 +27,17 @@
     };
 };
 
-&nice_view_spi {
+nice_view_spi: &spi0 {
+    compatible = "nordic,nrf-spim";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
 };
 
+/ {
+    ext-power {
+        init-delay-ms = <20>;
+    };
+};
 
